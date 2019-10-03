@@ -21,6 +21,8 @@ nav {
   font-family: 'Finger Paint', cursive;
   font-size: 34px;
   font-weight: 700;
+  text-decoration: none;
+  color: #272729;
 }
 
 .nav__logo {

@@ -3,6 +3,8 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Nav from "../components/nav";
+import BlogFooter from "./blogFooter.js";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './blog.css';
 
 export const query = graphql`
@@ -52,8 +54,11 @@ const BlogTemplate = (props) => {
             {__html: `${props.data.contentfulBlog.content.childMarkdownRemark.html}`}
           } />
         </div>
+        <h2 className="blog-recommend">Recommended Articles</h2>
+        <BlogFooter />
+        {/* <FontAwesomeIcon icon={['fab', 'google']} /> */}
       </div>
-    </Layout>
+    </Layout> 
   )
 };
 
