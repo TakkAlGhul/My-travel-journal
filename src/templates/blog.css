@@ -73,6 +73,31 @@
   margin: 0 20%;
 }
 
+.category-tags {
+  width: 960px;
+  margin: 0 auto 40px;
+}
+
+.category-box {
+  list-style: none;
+  padding-inline-start: 0 !important;
+}
+
+.category-box a {
+  border: #272729 solid 1px;
+  border-radius: 1.25rem;
+  text-decoration: none;
+  color: #272729;
+  padding: 5px 15px;
+}
+
+.category-box a:hover {
+  color: #fff;
+  background-color: #272729;
+  transition: all 0.3s ease 0s;
+}
+
+
 @media screen and (max-width: 1000px) {
   .right {
       float: none;

@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Nav from "../components/nav";
@@ -17,6 +17,10 @@ query BlogTemplate($id: String!) {
       childMarkdownRemark {
         html
       }
+    }
+    category {
+      category
+      id
     }
     seoTitle
     seoDescription
@@ -54,12 +58,17 @@ const BlogTemplate = (props) => {
             {__html: `${props.data.contentfulBlog.content.childMarkdownRemark.html}`}
           } />
         </div>
+        <ul className="category-tags">
+          {props.data.contentfulBlog.category.map(category => (
+            <li className="category-box"><a onClick={() => navigate(`/category/${category.category}`)}>{category.category}</a></li>
+          ))}
+        </ul>
         <h2 className="blog-recommend">Recommended Articles</h2>
         <BlogFooter />
-        {/* <FontAwesomeIcon icon={['fab', 'google']} /> */}
       </div>
     </Layout> 
-  )
+
+)
 };
 
 export default BlogTemplate;
