@@ -9,13 +9,13 @@ import './archive.css';
 
 import archiveHeader from '../images/archive-header.jpg';
 
-const Archive = (props) => {
+const Tips = (props) => {
   const blogContent= props.data.allContentfulBlog
   const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? '/blog' : `/blog/${currentPage - 1}`
-  const nextPage = `/blog/${currentPage + 1}`
+  const prevPage = currentPage - 1 === 1 ? '/category/tips' : `/category/tips${currentPage - 1}`
+  const nextPage = `/category/tips${currentPage + 1}`
 
   return (
     <Layout>
@@ -74,14 +74,16 @@ const Archive = (props) => {
   )
 };
 
-export default Archive;
+export default Tips;
 
 export const pageQuery = graphql`
-query ArchiveQuery ($skip: Int!, $limit: Int!) {
+query TipsQuery ($skip: Int!, $limit: Int!) {
   allContentfulBlog(
     sort: { fields: [createdAt], order: DESC }
     filter: {
-      node_locale: {eq: "en-US",}}
+      node_locale: {eq: "en-US",}
+      category: {elemMatch: {category: {eq: "Tips"}}}
+      }
       skip: $skip
       limit: $limit
   ) {
