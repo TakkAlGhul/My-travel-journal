@@ -8,11 +8,13 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav__items">
-        <a href="/" className="nav__left"><img src={logo} alt="Travel journal icon" className="nav__logo" /></a>
-        <a href="/" className="nav__title">Million Miles</a>
+        <Link to="/" className="nav__left"><img src={logo} alt="Travel journal icon" className="nav__logo" /></Link>
+        <Link to="/" className="nav__title">Million Miles</Link>
         <Link className={window.location.href.indexOf('blog') > 0 ? 'nav__link active' : 'nav__link'} to='/blog'>Blog</Link>
         <Link className={window.location.href.indexOf('about') > 0 ? 'nav__link active' : 'nav__link'} to='/about'>About</Link>
         <Link className={window.location.href.indexOf('contact') > 0 ? 'nav__link active' : 'nav__link'} to='/contact'>Contact</Link>
+      </div>
+      <div className="side__bar">
       </div>
     </nav>
   )

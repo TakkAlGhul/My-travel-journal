@@ -1,6 +1,6 @@
 .footer-feed {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 350px;
   grid-gap: 16px;
   margin: 40px auto;
@@ -36,7 +36,7 @@
   justify-content: flex-end;
   padding: 20px;
   transition: all .3s ease;
-  grid-column-start: span 4;
+  grid-column-start: span 3;
 }
 
 .feed-image:hover {
@@ -47,6 +47,6 @@
 @media screen and (max-width: 800px) {
   .feed-image {
     grid-column-start: 2;
-    grid-column-end: 12;
+    grid-column-end: 9;
   }
 }
