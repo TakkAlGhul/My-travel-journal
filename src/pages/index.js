@@ -5,16 +5,18 @@ import SEO from "../components/seo";
 import Nav from "../components/nav";
 import Featured from "../components/featured";
 import Home from "../components/home";
+import Instagram from "../components/instagram/instagram";
 import './index.css'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`travel`, `tech`, `tips`, `guide`, `europe`]} />
     <Nav />
     <Featured />
     <h2 className="wrapper__title">Recent Posts</h2>
     <Home />
     <Link to='/blog' className="more">More Articles</Link>
+    <Instagram />
   </Layout>
 )
 

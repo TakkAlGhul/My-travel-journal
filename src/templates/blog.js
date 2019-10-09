@@ -59,7 +59,7 @@ const BlogTemplate = (props) => {
         </div>
         <ul className="category-tags">
           {props.data.contentfulBlog.category.map(category => (
-            <li className="category-box"><a onClick={() => navigate(`/category/${category.category}`)}>{category.category}</a></li>
+            <li className="category-box"><a onClick={() => navigate(`/category/${category.category.toLowerCase()}`)}>{category.category}</a></li>
           ))}
         </ul>
         <h2 className="blog-recommend">Recommended Articles</h2>
