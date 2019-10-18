@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql, navigate } from 'gatsby';
 import { window } from 'browser-monads';
 import Layout from '../components/layout';
-import Nav from '../components/nav';
+import Navigations from '../components/nav/navigations';
 import SEO from '../components/seo';
 import '../components/home/home.css';
 import './archive.css';
@@ -20,7 +20,7 @@ const Europe = (props) => {
   return (
     <Layout>
       <SEO title='Blog' keywords={['travel', 'travel blog', 'travel photography']} />
-      <Nav />
+      <Navigations />
       <header>
         <div className='archive__section'>
           <div className='archive__hero' style={{backgroundImage: `url(${archiveHeader})`}}></div>

@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, navigate } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Nav from "../components/nav";
+import Navigations from '../components/nav/navigations';
 import BlogFooter from "./blogFooter.js";
 import Author from '../components/Author';
 import Footer from '../components/Footer';
@@ -46,7 +46,7 @@ const BlogTemplate = (props) => {
   return (
     <Layout>
       <SEO title={props.data.contentfulBlog.seoTitle} description={props.data.contentfulBlog.seoDescription} keywords={props.data.contentfulBlog.seoKeywords} />
-      <Nav />
+      <Navigations />
       <div className="blog-header">
         <div className="blog-image" style={{backgroundImage: `url(${props.data.contentfulBlog.featuredImage.fluid.src})`}}></div>
         <div className="blog-title">

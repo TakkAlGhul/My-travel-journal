@@ -59,3 +59,16 @@
 .my-detail {
   text-align: left;
 }
+
+@media screen and (max-width: 800px) {
+  .info-wrapper img {
+    display: none;
+  }
+
+  .my-profile {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+  }
+  
+}
