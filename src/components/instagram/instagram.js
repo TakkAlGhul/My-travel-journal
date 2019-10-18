@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
+import './instagram.css';
 
 const Instagram = () => (
   <StaticQuery
     query={graphql`
       query InstagramPosts {
-        allInstagramContent(limit: 12) {
+        allInstagramContent(limit: 5) {
           edges {
             node {
               link
@@ -38,11 +39,12 @@ const Instagram = () => (
         <div style={{
         marginBottom: '1rem',
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
+        gridTemplateColumns: 'repeat(5, 1fr)',
+        opacity: '0.9',
       }} >
           {data.allInstagramContent.edges.map((item, i) => (
             item.node.localImage ? (
-              <div key={i}>
+              <div key={i} className="insta-images">
                 <a
                   href={item.node.link}
                   target='_blank'

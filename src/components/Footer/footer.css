@@ -1,0 +1,30 @@
+.footer {
+  margin: 80px 0 10px;
+  text-align: center;
+  height: 200px;
+}
+
+.social-media {
+  height: 100%;
+}
+
+.social-media svg {
+  color: #0a0a0a;
+  font-size: 50px;
+  margin: 50px 20px 10px;
+  transition: all 0.6s ease 0s;
+}
+
+.social-media svg:hover {
+  transform: scale(2, 2);
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    height: 80px;
+  }
+  .social-media svg {
+    font-size: 20px;
+    margin: 30px 10px 10px;
+  }
+}

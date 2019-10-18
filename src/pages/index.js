@@ -6,6 +6,7 @@ import Nav from "../components/nav";
 import Featured from "../components/featured";
 import Home from "../components/home";
 import Instagram from "../components/instagram/instagram";
+import Footer from '../components/Footer';
 import './index.css'
 
 const IndexPage = () => (
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Home />
     <Link to='/blog' className="more">More Articles</Link>
     <Instagram />
+    <Footer />
   </Layout>
 )
 
