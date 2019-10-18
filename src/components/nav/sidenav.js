@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby";
+import { window } from 'browser-monads';
 import './sidenav.css';
 
 const Sidenav = (props) => {
