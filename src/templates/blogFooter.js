@@ -11,7 +11,7 @@ export default () => (
       sort: { fields: [createdAt], order: DESC }
       filter: {
         node_locale: {eq: "en-US",}
-        home: {eq: true}
+        featured: {eq: true}
       }
     ) {
       edges {

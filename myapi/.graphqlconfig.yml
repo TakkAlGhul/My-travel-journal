@@ -1,0 +1,9 @@
+projects:
+  cf:
+   schemaPath: contentful.graphql
+   extensions:
+     endpoints:
+       default:
+         url: https://cdn.contentful.com/spaces/w4mqiw5dcnj3/graphql/alpha?locale=en-US
+         headers:
+           Authorization: Bearer f8oprGUFgrsISimEAd-K2kP1ZnwDlYR7nG0LGqhrjEQ

@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Nav from "../components/nav";
+import Navigations from '../components/nav/navigations';
 import './contact.css';
 
 const Contact = () => (
   <Layout>
     <SEO title='Contact' description='contact Taku Yaku: Travel Puotographer and Web developer' />
-    <Nav />
+    <Navigations />
     <div className='contact__header'></div>
         <div className='contact__section'>
             <div className='contact__form'>

@@ -41,6 +41,11 @@ nav {
 }
 
 @media screen and (max-width: 800px) {
+  .nav__title {
+    margin: 0 20px 0 0;
+    font-size: 24px;
+  }
+
   .nav__link {
     display: none;
   }
