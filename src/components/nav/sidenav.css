@@ -11,12 +11,13 @@
 
 .side-nav {
   height: 100%;
-  background: #fff;
+  background: #242424;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
   max-width: 400px;
+  min-width: 200px;
   z-index: 200;
   transform: translateX(100vw);
   transition: transform 0.4s ease-out;
@@ -29,14 +30,24 @@
 
 .side-nav ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 80px 0;
 }
 
 .nav__link-sp {
-  color: #272729;
+  display: block;
+  margin: 30px 0;
+  color: #fff;
   font-family: Muli,sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease 0s;
+}
+
+.nav__link-sp svg {
+  margin-right: 10px;
 }
 

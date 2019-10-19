@@ -19,7 +19,6 @@ class navigations extends Component {
   };
 
   render() {
-    let sideNav;
     let backDrop;
 
     if (this.state.sideNavOpen) {
@@ -33,7 +32,7 @@ class navigations extends Component {
       </div>
     )
   }
-}
+};
 
 
 
